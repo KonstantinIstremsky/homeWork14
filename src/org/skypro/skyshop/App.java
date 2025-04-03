@@ -3,6 +3,7 @@ package org.skypro.skyshop;
 import org.skypro.skyshop.article.Article;
 import org.skypro.skyshop.product.*;
 import org.skypro.skyshop.search.SearchEngine;
+import org.skypro.skyshop.search.Searchable;
 
 public class App {
     public static void main(String[] args) {
@@ -17,9 +18,9 @@ public class App {
 
         // Создание поискового движка
         SearchEngine searchEngine = new SearchEngine(10);
-        searchEngine.add(tv);
-        searchEngine.add(laptop);
-        searchEngine.add(fridge);
+        searchEngine.add((Searchable) tv);
+        searchEngine.add((Searchable) laptop);
+        searchEngine.add((Searchable) fridge);
         searchEngine.add(article1);
         searchEngine.add(article2);
 
