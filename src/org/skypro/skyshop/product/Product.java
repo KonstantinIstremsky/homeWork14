@@ -5,7 +5,7 @@ public abstract class Product {
 
     public Product(String name) {
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("Имя продукта не может быть null, пустым или состоять только из пробелов.");
+            throw new IllegalArgumentException("Имя продукта не может быть пустым или содержать только пробелы.");
         }
         this.name = name;
     }
@@ -13,7 +13,4 @@ public abstract class Product {
     public String getName() {
         return name;
     }
-
-    // Абстрактный метод
-    public abstract int getPrice();
 }
